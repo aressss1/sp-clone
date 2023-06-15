@@ -36,13 +36,13 @@ const Header:React.FC<HeaderProps> = ({
             >
                 <button
                     onClick={() => router.back()}
-                    className="rounded-full bg-black flex items-center justify-center hover:opacity-75 transition"
+                    className="rounded-full bg-black flex items-center justify-center cursor-pointer  hover:opacity-75 transition"
                 >
                     <RxCaretLeft className="text-white" size={35} />
                 </button>
                 <button
                     onClick={() => router.forward()}
-                    className="rounded-full bg-black flex items-center justify-center hover:opacity-75 transition"
+                    className="rounded-full bg-black flex items-center justify-center cursor-pointer hover:opacity-75 transition"
                 >
                     <RxCaretRight className="text-white" size={35} />
                 </button>
@@ -51,14 +51,14 @@ const Header:React.FC<HeaderProps> = ({
                 className="flex md:hidden gap-x-2 items-center "
             >
                 <button
-                    className="rounded-full p-2 bg-white flex items-center hover:opacity-75 transition"
+                    className="rounded-full p-2 bg-white flex items-center justify-center  cursor-pointer hover:opacity-75 transition"
                 >
-                    <HiHome className="tetx-black" size={20} />
+                    <HiHome className="text-black" size={20} />
                 </button>
                 <button
-                    className="rounded-full p-2 bg-white flex items-center hover:opacity-75 transition"
+                    className="rounded-full p-2 bg-white flex items-center justify-center  cursor-pointer hover:opacity-75 transition"
                 >
-                    <HiSearch className="tetx-black" size={20} />
+                    <HiSearch className="text-black" size={20} />
                 </button>
             </div>
             <div
