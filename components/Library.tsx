@@ -1,33 +1,46 @@
 'use client'
 import { TbPlaylist } from "react-icons/tb"
 import { AiOutlinePlus } from "react-icons/ai"
+import useAuthModal from "@/hooks/useAuthModal"
+import { useUser } from "@/hooks/useUser"
+import useUploadModal from "@/hooks/useUploadModal"
 
 const Library = () => {
-    
-    const onClick = () => {
-        // handlde upload later
+  const authModal = useAuthModal()
+  const { user } = useUser()
+  const uploadModal = useUploadModal()
+
+
+  const onClick = () => {
+    if (!user) {
+      return authModal.onOpen()
     }
+    
+    //TODO:
+
+    return uploadModal.onOpen();
+  }
 
   return (
     <div className="flex flex-col" >
-      <div 
+      <div
         className="flex items-center justify-between px-5 pt-4"
       >
         <div
-            className="inline-flex items-center gap-x-2 "
+          className="inline-flex items-center gap-x-2 "
         >
-            <TbPlaylist
-                size={26}
-                className="text-neutral-400"
-            />
-            <p>
-              Your Library  
-            </p>
+          <TbPlaylist
+            size={26}
+            className="text-neutral-400"
+          />
+          <p>
+            Your Library
+          </p>
         </div>
         <AiOutlinePlus
-            onClick={onClick}
-            size={20}
-            className="
+          onClick={onClick}
+          size={20}
+          className="
                 text-neutral-400 cursoe-pointer hover:text-white transition 
             "
         />
