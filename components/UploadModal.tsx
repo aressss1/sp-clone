@@ -52,7 +52,7 @@ const UploaMdodal = () => {
         return
       }
 
-      const uniqueId = uniqid()
+      const uniqueID = uniqid()
 
       //Upload Song
       const {
@@ -61,7 +61,7 @@ const UploaMdodal = () => {
       } = await supabaseClient
         .storage
         .from("songs")
-        .upload(`song-${values.title}-${uniqueId}`, songFile, {
+        .upload(`song-${values.title}-${uniqueID}`, songFile, {
           cacheControl: '3600',
           upsert: false
         })
@@ -79,7 +79,7 @@ const UploaMdodal = () => {
       } = await supabaseClient
         .storage
         .from('images')
-        .upload(`image-${values.title}-${uniqueId}`, imageFile, {
+        .upload(`image-${values.title}-${uniqueID}`, imageFile, {
           cacheControl: '3600',
           upsert: false
         });
@@ -105,7 +105,7 @@ const UploaMdodal = () => {
       if (supabaseError) {
         return toast.error(supabaseError.message);
       }
-      
+
       router.refresh();
       setIsLoading(false);
       toast.success('Song created!');
@@ -123,8 +123,8 @@ const UploaMdodal = () => {
 
   return (
     <Modal
-      title="Upload modal title"
-      description="Upload modal description"
+      title="Add a song"
+      description="Upload an mp3 file"
       isOpen={uploadModal.isOpen}
       onChange={onChange}
     >
