@@ -8,10 +8,10 @@ import { createOrRetrieveCustomer } from '@/libs/supabaseAdmin';
 
 export async function POST() {
   try {
-    const supabase = createRouteHandlerClient({ 
+    const supabase = createRouteHandlerClient({
       cookies
-     });
-    
+    });
+
     const {
       data: { user }
     } = await supabase.auth.getUser();
@@ -23,14 +23,25 @@ export async function POST() {
     });
 
     if (!customer) throw Error('Could not get customer');
+
     const { url } = await stripe.billingPortal.sessions.create({
       customer,
       return_url: `${getURL()}/account`
     });
 
+    const { error } = await supabase
+      .from('subscriptions')
+      .delete()
+      .eq('user_id', user.id);
+
+    if (error) {
+      console.log(error);
+      throw Error('Error deleting subscription');
+    }
+
     return NextResponse.json({ url });
   } catch (err: any) {
     console.log(err);
-    new NextResponse('Internal Error', { status: 500 })
+    return new NextResponse('Internal Error', { status: 500 })
   }
 };
