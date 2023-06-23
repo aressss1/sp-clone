@@ -29,15 +29,15 @@ export async function POST() {
       return_url: `${getURL()}/account`
     });
 
-    const { error } = await supabase
-      .from('subscriptions')
-      .delete()
-      .eq('user_id', user.id);
+    // const { error } = await supabase
+    //   .from('subscriptions')
+    //   .delete()
+    //   .eq('user_id', user.id);
 
-    if (error) {
-      console.log(error);
-      throw Error('Error deleting subscription');
-    }
+    // if (error) {
+    //   console.log(error);
+    //   throw Error('Error deleting subscription');
+    // }
 
     return NextResponse.json({ url });
   } catch (err: any) {

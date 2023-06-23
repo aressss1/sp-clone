@@ -7,11 +7,13 @@ import { useUser } from "@/hooks/useUser";
 import Button from "@/components/Button";
 import useSubscribeModal from "@/hooks/useSubscribeModal";
 import { postData } from "@/libs/helpers";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
 const AccountContent = () => {
   const router = useRouter();
   const subscribeModal = useSubscribeModal();
   const { isLoading, subscription, user } = useUser();
+  const supabaseClient = useSupabaseClient()
 
   const [loading, setLoading] = useState(false);
 
@@ -27,6 +29,20 @@ const AccountContent = () => {
       const { url, error } = await postData({
         url: '/api/create-portal-link'
       });
+
+      console.log('deleting')
+      const { error: supbaseError } = await supabaseClient
+        .from('subscriptions')
+        .delete()
+        .eq('user_id', user?.id);
+
+      if (supbaseError) {
+        console.log(supbaseError);
+        throw Error('Error deleting subscription');
+      }
+
+      console.log('deleted')
+      
       window.location.assign(url);
     } catch (error) {
       if (error) return alert((error as Error).message);
@@ -34,23 +50,23 @@ const AccountContent = () => {
     setLoading(false);
   };
 
-  return ( 
+  return (
     <div className="mb-7 px-6">
       {!subscription && (
         <div className="flex flex-col gap-y-4">
-        <p>No active plan.</p>
-        <Button 
-          onClick={subscribeModal.onOpen}
-          className="w-[300px]"
-        >
-          Subscribe
-        </Button>
-      </div>
+          <p>No active plan.</p>
+          <Button
+            onClick={subscribeModal.onOpen}
+            className="w-[300px]"
+          >
+            Subscribe
+          </Button>
+        </div>
       )}
       {subscription && (
         <div className="flex flex-col gap-y-4">
-          <p>You are currently on the 
-            <b> {subscription?.prices?.products?.name} </b> 
+          <p>You are currently on the
+            <b> {subscription?.prices?.products?.name} </b>
             plan.
           </p>
           <Button
@@ -65,5 +81,5 @@ const AccountContent = () => {
     </div>
   );
 }
- 
+
 export default AccountContent;
