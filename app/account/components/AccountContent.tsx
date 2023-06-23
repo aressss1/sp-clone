@@ -30,19 +30,6 @@ const AccountContent = () => {
         url: '/api/create-portal-link'
       });
 
-      console.log('deleting')
-      const { error: supbaseError } = await supabaseClient
-        .from('subscriptions')
-        .delete()
-        .eq('user_id', user?.id);
-
-      if (supbaseError) {
-        console.log(supbaseError);
-        throw Error('Error deleting subscription');
-      }
-
-      console.log('deleted')
-      
       window.location.assign(url);
     } catch (error) {
       if (error) return alert((error as Error).message);
