@@ -31,7 +31,7 @@
 ### Cloning the repository
 
 ```shell
-git clone https://github.com/AntonioErdeljac/next13-spotify.git
+git clone https://github.com/aressss1/sp-clone.git
 ```
 
 ### Install packages
