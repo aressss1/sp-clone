@@ -72,20 +72,12 @@ Running commands with npm `npm run [command]`
 
   ## Preview: 
 
-  
-![Screenshot (54)](https://github.com/aressss1/sp-clone/assets/127649710/35721094-4e91-4426-a03b-c40fc523df4c)
-![Screenshot (56)](https://github.com/aressss1/sp-clone/assets/127649710/1aed5194-02a8-4c4d-aadd-fd5e55f4643a)
-![Screenshot (57)](https://github.com/aressss1/sp-clone/assets/127649710/3267f106-cecb-45b9-93b9-e90af1dbb492)
-![Screenshot (58)](https://github.com/aressss1/sp-clone/assets/127649710/c225d697-8784-4260-860d-ada55c30fc54)
-![Screenshot (60)](https://github.com/aressss1/sp-clone/assets/127649710/eaa419eb-509f-4053-93d9-a46e575888ea)
-![Screenshot (61)](https://github.com/aressss1/sp-clone/assets/127649710/4c7a5e45-b8c6-441d-8f7a-f6c5bd434a25)
-![Screenshot (62)](https://github.com/aressss1/sp-clone/assets/127649710/195e3a60-9244-4cee-8a54-23be0f709144)
-![Screenshot (63)](https://github.com/aressss1/sp-clone/assets/127649710/11f92799-7ec9-4ff5-89f5-761e37b1898c)
-![Screenshot (64)](https://github.com/aressss1/sp-clone/assets/127649710/21f7702c-27dd-44b3-90c5-23f7eff4099a)
-![Screenshot (65)](https://github.com/aressss1/sp-clone/assets/127649710/d6c45acc-6dff-48f7-8ba8-d936ae23ad00)
-![Screenshot (67)](https://github.com/aressss1/sp-clone/assets/127649710/634f4095-8ac6-4c41-882b-cd16d52c4f1f)
-![Screenshot (68)](https://github.com/aressss1/sp-clone/assets/127649710/7e1a1353-efe3-42f3-9979-0bafa69d81a8)
-![Screenshot (69)](https://github.com/aressss1/sp-clone/assets/127649710/03ff234d-4272-4dac-91bf-91d4fc305df0)
-
+![prismify-render-1716880801439](https://github.com/aressss1/sp-clone/assets/127649710/8aa185e1-4519-452e-8d11-bfd1bec483b8)
+![prismify-render-1716880972440](https://github.com/aressss1/sp-clone/assets/127649710/673409de-8c2c-4a4e-9452-adcd12a23900)
+![prismify-render-1716880955637](https://github.com/aressss1/sp-clone/assets/127649710/f60ee59b-f10f-45b9-b296-4f7e8253d395)
+![prismify-render-1716880938707](https://github.com/aressss1/sp-clone/assets/127649710/ed2997b5-472d-412b-9dff-161c070d7cbe)
+![prismify-render-1716880923700](https://github.com/aressss1/sp-clone/assets/127649710/8fc1bf85-8bfb-4c1e-8205-8157a56aabdd)
+![prismify-render-1716880906603](https://github.com/aressss1/sp-clone/assets/127649710/b85c3deb-caeb-447d-84a4-5ffc67f60220)
+![prismify-render-1716880870455](https://github.com/aressss1/sp-clone/assets/127649710/aeb8d646-1c80-4df0-a49a-09fc7f04eb04)
 
 
